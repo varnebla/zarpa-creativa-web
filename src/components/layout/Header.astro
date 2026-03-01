@@ -13,13 +13,13 @@ const currentPath = Astro.url.pathname;
 >
   <!-- Pill -->
   <header
-    class="w-full max-w-3xl bg-white/75 backdrop-blur-xl rounded-full shadow-sm shadow-neutral-950/10 border border-white/60"
+    class="w-full max-w-3xl bg-base-bg/75 backdrop-blur-xl rounded-full shadow-sm shadow-base-ink/10 border border-base-bg/60"
   >
     <div class="px-3 h-14 flex items-center justify-between gap-6">
       <!-- Logo -->
       <a
         href="/"
-        class="font-display font-bold text-lg text-neutral-950 hover:text-neutral-600 transition-colors shrink-0 ml-2"
+        class="font-display font-bold text-lg text-base-ink hover:text-base-ink/60 transition-colors shrink-0 ml-2"
       >
         Zarpa Creativa
       </a>
@@ -39,8 +39,8 @@ const currentPath = Astro.url.pathname;
                 class:list={[
                   'text-sm font-medium transition-colors',
                   isActive
-                    ? 'text-neutral-950'
-                    : 'text-neutral-700 hover:text-neutral-950',
+                    ? 'text-base-ink'
+                    : 'text-base-ink/70 hover:text-base-ink',
                 ]}
                 aria-current={isActive ? 'page' : undefined}
               >
@@ -55,7 +55,7 @@ const currentPath = Astro.url.pathname;
       <div class="flex items-center gap-3 shrink-0">
         <a
           href="/contact"
-          class="hidden md:inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-neutral-700 transition-colors"
+          class="hidden md:inline-flex items-center gap-2 bg-base-ink text-base-bg text-sm font-semibold px-5 py-2 rounded-full hover:bg-base-ink/80 transition-colors"
         >
           Hablemos
           <span aria-hidden="true">→</span>
@@ -70,13 +70,13 @@ const currentPath = Astro.url.pathname;
           class="md:hidden flex flex-col gap-1.5 p-1"
         >
           <span
-            class="block w-5 h-px bg-neutral-950 transition-all duration-300"
+            class="block w-5 h-px bg-base-ink transition-all duration-300"
             id="bar1"></span>
           <span
-            class="block w-5 h-px bg-neutral-950 transition-all duration-300"
+            class="block w-5 h-px bg-base-ink transition-all duration-300"
             id="bar2"></span>
           <span
-            class="block w-5 h-px bg-neutral-950 transition-all duration-300"
+            class="block w-5 h-px bg-base-ink transition-all duration-300"
             id="bar3"></span>
         </button>
       </div>
@@ -86,7 +86,7 @@ const currentPath = Astro.url.pathname;
   <!-- Mobile menu (drop below pill) -->
   <div
     id="mobile-menu"
-    class="md:hidden hidden w-full max-w-3xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-sm shadow-neutral-950/10 border border-white/60"
+    class="md:hidden hidden w-full max-w-3xl bg-base-bg/80 backdrop-blur-xl rounded-3xl shadow-sm shadow-base-ink/10 border border-base-bg/60"
   >
     <nav aria-label="Menú móvil" class="flex flex-col px-6 py-6 gap-5">
       {
@@ -98,7 +98,7 @@ const currentPath = Astro.url.pathname;
               href={href}
               class:list={[
                 'text-base font-medium transition-colors',
-                isActive ? 'text-neutral-950' : 'text-neutral-700',
+                isActive ? 'text-base-ink' : 'text-base-ink/70',
               ]}
               aria-current={isActive ? 'page' : undefined}
             >
@@ -109,7 +109,7 @@ const currentPath = Astro.url.pathname;
       }
       <a
         href="/contact"
-        class="inline-flex items-center justify-center gap-2 bg-neutral-950 text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-neutral-700 transition-colors mt-1"
+        class="inline-flex items-center justify-center gap-2 bg-base-ink text-base-bg text-sm font-semibold px-5 py-3 rounded-full hover:bg-base-ink/80 transition-colors mt-1"
       >
         Hablemos →
       </a>

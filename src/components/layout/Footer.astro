@@ -1,9 +1,8 @@
 ---
 const serviciosLinks = [
-  { label: 'SEO & Posicionamiento', href: '/servicios/seo' },
-  { label: 'Social Media', href: '/servicios/social-media' },
-  { label: 'Publicidad Digital', href: '/servicios/publicidad-digital' },
-  { label: 'Diseño y Branding', href: '/servicios/diseno-branding' },
+  { label: 'Gestión de Redes', href: '/servicios/gestion-redes' },
+  { label: 'Auditorías de Marketing', href: '/servicios/auditorias-marketing' },
+  { label: 'Redacción de Contenido', href: '/servicios/redaccion-contenido' },
 ];
 
 const companyLinks = [
@@ -16,7 +15,7 @@ const companyLinks = [
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-neutral-950 text-white">
+<footer class="bg-base-ink text-base-bg">
   <div class="max-w-6xl mx-auto px-6 pt-20 pb-10">
     <!-- Top -->
     <div
@@ -26,7 +25,7 @@ const year = new Date().getFullYear();
       <div class="lg:col-span-2">
         <a
           href="/"
-          class="font-display font-bold text-2xl text-white hover:text-neutral-300 transition-colors"
+          class="font-display font-bold text-2xl text-base-bg hover:text-base-bg/60 transition-colors"
         >
           Zarpa Creativa
         </a>
@@ -36,7 +35,7 @@ const year = new Date().getFullYear();
         </p>
         <a
           href="/contact"
-          class="inline-block mt-8 border border-white/20 text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-white hover:text-neutral-950 transition-colors"
+          class="inline-block mt-8 border border-base-bg/20 text-base-bg text-sm font-semibold px-6 py-3 rounded-full hover:bg-base-bg hover:text-base-ink transition-colors"
         >
           Empieza tu proyecto →
         </a>
@@ -55,7 +54,7 @@ const year = new Date().getFullYear();
               <li>
                 <a
                   href={href}
-                  class="text-sm text-neutral-400 hover:text-white transition-colors"
+                  class="text-sm text-base-bg/50 hover:text-base-bg transition-colors"
                 >
                   {label}
                 </a>
@@ -78,7 +77,7 @@ const year = new Date().getFullYear();
               <li>
                 <a
                   href={href}
-                  class="text-sm text-neutral-400 hover:text-white transition-colors"
+                  class="text-sm text-base-bg/50 hover:text-base-bg transition-colors"
                 >
                   {label}
                 </a>

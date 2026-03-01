@@ -1,0 +1,44 @@
+---
+// Sección "about" editorial en home — texto grande con énfasis en bold
+---
+
+<section class="home-about px-6 py-28 md:py-36">
+  <div class="max-w-4xl mx-auto">
+    <p class="statement">
+      Somos Zarpa Creativa&thinsp;—&thinsp;un estudio digital
+      <strong>sin miedo</strong> que construye
+      <strong>marcas que perduran</strong> y
+      <span class="underline-highlight">webs que convierten</span>. Llevamos <strong
+        >5 años</strong
+      > combinando
+      <strong>estrategia real</strong>, creatividad sin filtros y datos para que
+      tu negocio no solo aparezca — sino que <strong>arrase</strong>.
+    </p>
+  </div>
+</section>
+
+<style>
+  .home-about {
+    border-top: none;
+  }
+
+  .statement {
+    font-family: var(--font-sans);
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    line-height: 1.3;
+    color: #191919;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    text-wrap: pretty;
+  }
+
+  .statement strong {
+    font-weight: 700;
+  }
+
+  .underline-highlight {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+  }
+</style>

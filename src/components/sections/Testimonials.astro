@@ -1,0 +1,126 @@
+---
+const testimonials = [
+  {
+    quote:
+      'Zarpa rediseñó nuestra web y en tres meses duplicamos las consultas orgánicas. No solo entregan diseño — entregan resultados.',
+    author: 'Laura Méndez',
+    role: 'Fundadora, Estudio Cien',
+  },
+  {
+    quote:
+      'Trabajar con ellos fue diferente desde el primer día. Entienden el negocio antes de hablar de píxeles. Eso marca la diferencia.',
+    author: 'Marcos Iniesta',
+    role: 'Director de Marketing, Ferros SL',
+  },
+  {
+    quote:
+      'Nuestra comunidad en Instagram pasó de 800 a 12.000 seguidores en seis meses. Y lo mejor: son seguidores reales que compran.',
+    author: 'Sofía Ruano',
+    role: 'CEO, La Miel Silvestre',
+  },
+];
+---
+
+<section class="testimonials-section px-6 py-24 md:py-32">
+  <div class="max-w-6xl mx-auto">
+    <p class="section-label">Clientes</p>
+    <h2 class="section-title">Lo que dicen<br />quienes confían en nosotros</h2>
+
+    <div class="grid">
+      {
+        testimonials.map((t) => (
+          <article class="card">
+            <blockquote class="quote">"{t.quote}"</blockquote>
+            <footer class="author-block">
+              <span class="author-name">{t.author}</span>
+              <span class="author-role">{t.role}</span>
+            </footer>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    background-color: #191919;
+    color: #faf6ef;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #faf6ef;
+    margin-bottom: 3.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background-color: #191919;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .card:hover {
+    background-color: #242424;
+  }
+
+  .quote {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    line-height: 1.65;
+    color: #d9d5cd;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .author-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.25rem;
+  }
+
+  .author-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #faf6ef;
+  }
+
+  .author-role {
+    font-size: 0.8rem;
+    color: #666;
+  }
+</style>

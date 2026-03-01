@@ -3,4 +3,10 @@
 @theme {
   --font-sans: var(--font-general-sans), sans-serif;
   --font-display: var(--font-playfair), serif;
+
+  /* Colores corporativos Zarpa Creativa */
+  --color-brand-blue: #8AB3DC;
+  --color-brand-yellow: #E6CF84;
+  --color-base-bg: #FAF6EF;
+  --color-base-ink: #191919;
 }

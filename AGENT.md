@@ -8,6 +8,17 @@ Guía de referencia para el agente de IA que trabaje en este proyecto. Leer ante
 
 **Zarpa Creativa** es la web corporativa de una agencia de marketing digital. Su objetivo es presentar servicios, casos de éxito, equipo y captar leads de clientes potenciales.
 
+### Paleta de color corporativa
+
+| Token | Valor | Uso |
+|---|---|---|
+| `brand-blue` | `#8AB3DC` | Acento corporativo azul (degradados, highlights) |
+| `brand-yellow` | `#E6CF84` | Acento corporativo amarillo (degradados, highlights) |
+| `base-bg` | `#FAF6EF` | Fondo base global |
+| `base-ink` | `#191919` | Color de texto principal |
+
+En CSS/Tailwind están disponibles como `var(--color-brand-blue)`, `var(--color-brand-yellow)`, etc., definidos en `src/styles/global.css`.
+
 ---
 
 ## Stack tecnológico

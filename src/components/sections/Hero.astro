@@ -3,32 +3,24 @@
 ---
 
 <section
-  class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
-  style="background-color: #fefcff;"
+  class="relative flex items-center justify-center px-6 pt-32 pb-24 overflow-hidden bg-base-bg"
+  style="background-image: radial-gradient(circle at 25% 60%, rgba(138, 179, 220, 0.35), transparent 55%), radial-gradient(circle at 75% 10%, rgba(230, 207, 132, 0.35), transparent 55%);"
 >
-  <!-- Dreamy Sky Pink Glow -->
-  <div
-    class="absolute inset-0 z-0"
-    style="background-image: radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%), radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%);"
-    aria-hidden="true"
-  >
-  </div>
-
   <!-- Content -->
   <div class="relative z-10 max-w-5xl mx-auto text-center">
     <p
-      class="text-sm font-medium tracking-widest text-neutral-600 uppercase mb-4"
+      class="text-sm font-medium tracking-widest text-base-ink/60 uppercase mb-4"
     >
       Agencia de Marketing Digital
     </p>
     <h1
-      class="font-display text-5xl md:text-7xl lg:text-8xl tracking-tighter font-bold leading-tight mb-8 text-neutral-950"
+      class="font-display text-5xl md:text-7xl lg:text-8xl tracking-tighter font-bold mb-8 text-base-ink"
     >
-      Marcas que <span class="italic text-neutral-500">crecen</span><br />con
+      Marcas que <span class="italic text-base-ink/50">crecen</span><br />con
       propósito
     </h1>
     <p
-      class="text-lg md:text-xl text-neutral-700 max-w-2xl mx-auto mb-12 text-pretty"
+      class="text-lg md:text-xl text-base-ink/70 max-w-2xl mx-auto mb-12 text-pretty"
     >
       En Zarpa Creativa combinamos estrategia, creatividad y datos para que tu
       marca no solo aparezca, sino que conecte.
@@ -36,16 +28,41 @@
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
         href="/servicios"
-        class="inline-block bg-neutral-950 text-white font-semibold px-8 py-4 rounded-full hover:bg-neutral-700 transition-colors"
+        class="inline-block bg-base-ink text-base-bg font-semibold px-8 py-4 rounded-full hover:bg-base-ink/80 transition-colors"
       >
         Nuestros servicios
       </a>
       <a
         href="/contact"
-        class="inline-block border border-neutral-950/20 text-neutral-950 font-semibold px-8 py-4 rounded-full hover:bg-neutral-950/5 transition-colors"
+        class="inline-block border border-base-ink/20 text-base-ink font-semibold px-8 py-4 rounded-full hover:bg-base-ink/5 transition-colors"
       >
         Hablemos
       </a>
     </div>
+
+    <!-- Hero image -->
+    <div class="hero-image-wrap mt-16">
+      <img
+        src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1400&q=80"
+        alt="Gato mirando a cámara"
+        class="hero-img"
+      />
+    </div>
   </div>
 </section>
+
+<style>
+  .hero-image-wrap {
+    width: 100%;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 8px 48px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero-img {
+    width: 100%;
+    height: clamp(260px, 45vw, 560px);
+    object-fit: cover;
+    display: block;
+  }
+</style>
