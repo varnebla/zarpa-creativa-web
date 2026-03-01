@@ -1,0 +1,62 @@
+---
+const pasos = [
+  {
+    titulo: 'Escuchamos y analizamos',
+    descripcion:
+      'Antes de proponer nada, entendemos tu negocio, tu competencia y tus objetivos. Una auditoría honesta es el punto de partida de cualquier estrategia que funcione.',
+  },
+  {
+    titulo: 'Diseñamos la estrategia',
+    descripcion:
+      'Con los datos encima de la mesa, construimos un plan a medida: qué canales activar, qué mensajes usar y en qué orden para generar resultados reales.',
+  },
+  {
+    titulo: 'Ejecutamos con precisión',
+    descripcion:
+      'Pasamos del plan a la acción. Creamos contenido, gestionamos campañas y optimizamos cada pieza para que tu inversión rinda al máximo.',
+  },
+  {
+    titulo: 'Medimos y mejoramos',
+    descripcion:
+      'El trabajo no termina al publicar. Analizamos resultados, reportamos con transparencia y ajustamos continuamente para que la marca siga creciendo.',
+  },
+];
+---
+
+<section class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="flex items-center gap-4 mb-16">
+      <span class="block w-10 h-px bg-base-ink/40"></span>
+      <p class="text-sm font-medium tracking-widest text-base-ink/50 uppercase">
+        Cómo trabajamos
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <ol class="list-none">
+      {
+        pasos.map((paso, i) => (
+          <>
+            <li class="grid grid-cols-[4rem_1fr] md:grid-cols-[8rem_1fr] gap-6 md:gap-12 items-start py-10">
+              <span class="font-display text-5xl md:text-7xl font-bold text-base-ink/10 leading-none select-none">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <div class="pt-2 md:pt-3">
+                <h3 class="font-display text-2xl md:text-3xl font-semibold text-base-ink mb-3">
+                  {paso.titulo}
+                </h3>
+                <p class="text-neutral-600 leading-relaxed max-w-xl">
+                  {paso.descripcion}
+                </p>
+              </div>
+            </li>
+            {i < pasos.length - 1 && (
+              <li aria-hidden="true" class="h-px bg-base-ink/10" />
+            )}
+          </>
+        ))
+      }
+    </ol>
+  </div>
+</section>

@@ -1,11 +1,19 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import ServicesHero from '@/components/sections/ServicesHero.astro';
 import ServicesList from '@/components/sections/ServicesList.astro';
+import ServicesProcess from '@/components/sections/ServicesProcess.astro';
+import ServicesFaq from '@/components/sections/ServicesFaq.astro';
+import ServicesCta from '@/components/sections/ServicesCta.astro';
 ---
 
 <Layout
   title="Servicios - Zarpa Creativa"
   description="SEO, Social Media, Publicidad Digital y Diseño. Servicios de marketing digital diseñados para que tu marca crezca."
 >
+  <ServicesHero />
   <ServicesList />
+  <ServicesProcess />
+  <ServicesFaq />
+  <ServicesCta />
 </Layout>
