@@ -1,37 +1,63 @@
 ---
-
+// Hero de la página About — editorial, oscuro, gran tipografía
 ---
 
-<section class="py-24 px-6 bg-base-ink text-base-bg">
-  <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <p
-          class="text-sm font-medium tracking-widest text-neutral-500 uppercase mb-6"
-        >
-          Quiénes somos
-        </p>
-        <h1
-          class="font-display text-5xl md:text-6xl font-bold leading-tight mb-8"
-        >
-          Creatividad con<br /><span class="italic">estrategia</span>
-        </h1>
-        <p class="text-lg text-neutral-300 leading-relaxed mb-6">
-          Zarpa Creativa nació con una misión clara: hacer que las marcas
-          digitales dejen huella. No con trucos, sino con trabajo bien hecho.
-        </p>
-        <p class="text-neutral-400 leading-relaxed">
-          Somos un equipo de estrategas, diseñadores y especialistas en datos
-          que trabajamos codo con codo con nuestros clientes para construir
-          presencia digital real y duradera.
-        </p>
-      </div>
-      <div
-        class="bg-white/5 aspect-square flex items-center justify-center text-base-bg/30 text-sm"
+<section
+  class="relative overflow-hidden bg-base-ink text-base-bg px-6 pt-32 pb-16"
+>
+  <!-- Fondo sutil -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute inset-0"
+    style="background-image: radial-gradient(ellipse at 80% 0%, rgba(138,179,220,0.12) 0%, transparent 55%), radial-gradient(ellipse at 10% 90%, rgba(230,207,132,0.08) 0%, transparent 50%);"
+  >
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto">
+    <!-- Overline -->
+    <p
+      class="text-xs font-semibold tracking-[0.18em] uppercase text-base-bg/40 mb-10 animate-fade-in-up duration-500"
+    >
+      Sobre nosotros
+    </p>
+
+    <!-- Headline editorial dividida -->
+    <div class="mb-0">
+      <h1
+        class="font-display text-[clamp(3rem,7vw,6.5rem)] font-bold leading-none tracking-tight text-balance text-base-bg animate-fade-in-up duration-700 delay-100"
       >
-        {/* Imagen del equipo */}
-        Imagen del equipo
+        No somos una agencia
+        <span class="italic text-brand-yellow">más.</span>
+      </h1>
+    </div>
+
+    <!-- Subtext + imagen en grid -->
+    <div
+      class="mt-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-end pb-0"
+    >
+      <div class="max-w-xl animate-fade-in-up duration-700 delay-300">
+        <p class="text-[1.15rem] text-base-bg/70 leading-relaxed mb-6">
+          Zarpa Creativa es un estudio de marketing digital que trabaja con
+          marcas que quieren resultados reales, sin fuegos artificiales ni
+          promesas vacías.
+        </p>
+        <p class="text-base-bg/50 leading-relaxed">
+          Fundada en 2019, hemos crecido junto a nuestros clientes — desde
+          pequeños negocios locales hasta marcas consolidadas que buscaban una
+          nueva dirección.
+        </p>
       </div>
+    </div>
+
+    <!-- Imagen a todo ancho, pegada al fondo de la sección -->
+    <div
+      class="mt-14 w-full rounded-2xl overflow-hidden animate-fade-in-up duration-1000 delay-700"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1400&q=80"
+        alt="El equipo de Zarpa Creativa trabajando"
+        class="w-full h-[clamp(220px,40vw,520px)] object-cover block"
+      />
     </div>
   </div>
 </section>

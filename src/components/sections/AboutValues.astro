@@ -1,44 +1,65 @@
 ---
-
+// Sección de valores — numeración grande, fondo oscuro, contraste fuerte
 ---
 
-<section class="py-24 px-6 bg-base-bg">
-  <div class="max-w-4xl mx-auto">
-    <div class="mb-16 text-center">
-      <p
-        class="text-sm font-medium tracking-widest text-neutral-600 uppercase mb-4"
-      >
-        Nuestros valores
+<section class="py-24 md:py-36 px-6 bg-base-ink text-base-bg">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div
+      class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-20"
+    >
+      <div>
+        <p
+          class="text-xs font-semibold tracking-[0.18em] uppercase text-base-bg/35 mb-4"
+        >
+          Nuestros valores
+        </p>
+        <h2
+          class="font-display text-[clamp(2.4rem,5vw,4rem)] font-bold leading-[1.05] tracking-[-0.03em]"
+        >
+          Lo que nos mueve
+        </h2>
+      </div>
+      <p class="max-w-xs text-base-bg/50 text-sm leading-relaxed md:text-right">
+        Tres principios que guían cada decisión, cada reunión y cada entrega.
       </p>
-      <h2 class="font-display text-4xl md:text-5xl font-bold text-neutral-950">
-        Lo que nos mueve
-      </h2>
     </div>
 
-    <dl class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <!-- Grid de valores -->
+    <dl class="grid grid-cols-1 md:grid-cols-3 gap-px bg-base-bg/10">
       {
         [
           {
+            num: '01',
             term: 'Honestidad',
             definition:
-              'Decimos lo que pensamos y prometemos solo lo que podemos cumplir. Sin humo.',
+              'Decimos lo que pensamos y prometemos solo lo que podemos cumplir. Tu negocio merece la verdad, no lo que quieres oír.',
           },
           {
+            num: '02',
             term: 'Curiosidad',
             definition:
-              'El marketing digital cambia constantemente. Aprender es parte de nuestro trabajo diario.',
+              'El marketing digital cambia constantemente. Aprender no es opcional — es parte de la descripción del puesto.',
           },
           {
-            term: 'Resultado',
+            num: '03',
+            term: 'Impacto',
             definition:
-              'Cada decisión estratégica tiene que poder medirse. Nos importa el impacto real en tu negocio.',
+              'Cada decisión estratégica tiene que poder medirse. Nos importa el efecto real en tu negocio, no los informes bonitos.',
           },
-        ].map(({ term, definition }) => (
-          <div>
-            <dt class="font-display text-2xl font-semibold text-neutral-950 mb-3">
-              {term}
-            </dt>
-            <dd class="text-neutral-700 leading-relaxed">{definition}</dd>
+        ].map(({ num, term, definition }) => (
+          <div class="bg-base-ink p-8 md:p-10 flex flex-col gap-6 group hover:bg-base-bg/4 transition-colors duration-300">
+            <span class="font-display text-[4rem] font-bold leading-none text-base-bg/10 group-hover:text-brand-blue/30 transition-colors duration-300 select-none">
+              {num}
+            </span>
+            <div>
+              <dt class="font-display text-2xl font-semibold text-base-bg mb-3">
+                {term}
+              </dt>
+              <dd class="text-base-bg/55 leading-relaxed text-[0.95rem]">
+                {definition}
+              </dd>
+            </div>
           </div>
         ))
       }

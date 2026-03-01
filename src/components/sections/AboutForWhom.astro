@@ -1,0 +1,130 @@
+---
+// Para quién somos — y para quién no. Dos columnas en contraste.
+---
+
+<section class="px-6 py-24 md:py-36 bg-base-bg">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="mb-16">
+      <p
+        class="text-xs font-semibold tracking-[0.18em] uppercase text-base-ink/40 mb-4"
+      >
+        Encaje
+      </p>
+      <h2
+        class="font-display text-[clamp(2.2rem,4.5vw,3.5rem)] font-bold leading-[1.1] tracking-[-0.03em] text-base-ink text-balance max-w-xl"
+      >
+        ¿Somos la agencia que buscas?
+      </h2>
+    </div>
+
+    <!-- Dos columnas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Para quién SÍ -->
+      <div
+        class="rounded-2xl bg-brand-blue/15 border border-brand-blue/25 p-8 md:p-10"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <span
+            class="w-8 h-8 rounded-full bg-brand-blue/40 flex items-center justify-center text-base-ink"
+            aria-hidden="true"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M2 7.5L5.5 11L12 3"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+          </span>
+          <h3 class="font-display text-xl font-semibold text-base-ink">
+            Para quien somos
+          </h3>
+        </div>
+
+        <ul class="space-y-4">
+          {
+            [
+              'Marcas que quieren crecer de forma sostenible, no viralizarse a cualquier precio.',
+              'Negocios que buscan un equipo que entienda su sector y hable su idioma.',
+              'Fundadores que valoran la honestidad y toman decisiones con datos.',
+              'Empresas que ya tienen una base y quieren llevarla al siguiente nivel.',
+              'Proyectos con presupuesto real y voluntad de invertir en comunicación.',
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-base-ink/80 text-[0.95rem] leading-relaxed">
+                <span
+                  class="mt-[0.3em] shrink-0 w-4 h-4 rounded-full bg-brand-blue/50 flex items-center justify-center"
+                  aria-hidden="true"
+                >
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                    <path
+                      d="M1.5 4.5L3 6L6.5 2"
+                      stroke="#191919"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Para quién NO -->
+      <div
+        class="rounded-2xl bg-base-ink/4 border border-base-ink/10 p-8 md:p-10"
+      >
+        <div class="flex items-center gap-3 mb-8">
+          <span
+            class="w-8 h-8 rounded-full bg-base-ink/10 flex items-center justify-center text-base-ink/60"
+            aria-hidden="true"
+          >
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path
+                d="M2 2L10 10M10 2L2 10"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <h3 class="font-display text-xl font-semibold text-base-ink">
+            Para quien no somos
+          </h3>
+        </div>
+
+        <ul class="space-y-4">
+          {
+            [
+              'Quienes buscan resultados inmediatos sin invertir el tiempo necesario.',
+              'Marcas que esperan que hagamos magia sin información, accesos ni contexto.',
+              'Negocios que quieren un proveedor ejecutor, no un socio estratégico.',
+              'Quienes no dan feedback o desaparecen semanas sin comunicación.',
+              'Proyectos sin presupuesto mínimo viable para marketing digital.',
+            ].map((item) => (
+              <li class="flex items-start gap-3 text-base-ink/50 text-[0.95rem] leading-relaxed">
+                <span
+                  class="mt-[0.3em] shrink-0 w-4 h-4 rounded-full bg-base-ink/10 flex items-center justify-center"
+                  aria-hidden="true"
+                >
+                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                    <path
+                      d="M2 2L6 6M6 2L2 6"
+                      stroke="#191919"
+                      stroke-width="1.4"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                {item}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

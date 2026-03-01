@@ -1,0 +1,55 @@
+---
+// Banner CTA exclusivo de la página About — tono personal, fondo azul
+---
+
+<section
+  class="px-6 py-28 md:py-36 overflow-hidden relative bg-brand-yellow"
+  style="background-image: radial-gradient(ellipse at 10% 80%, rgba(25,25,25,0.10) 0%, transparent 55%), radial-gradient(ellipse at 90% 10%, rgba(250,246,239,0.18) 0%, transparent 55%);"
+>
+  <!-- Elemento decorativo -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -right-24 -top-16 w-md h-112 rounded-full border border-base-ink/10 opacity-30"
+  >
+  </div>
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute -right-12 -top-4 w-72 h-72 rounded-full border border-base-ink/8 opacity-20"
+  >
+  </div>
+
+  <div class="max-w-4xl mx-auto relative z-10">
+    <div class="max-w-2xl">
+      <p
+        class="text-xs font-semibold tracking-[0.15em] uppercase text-base-ink/50 mb-6"
+      >
+        ¿Conectamos?
+      </p>
+      <h2
+        class="font-display text-[clamp(2.4rem,5vw,4rem)] font-bold leading-[1.1] tracking-[-0.03em] text-base-ink mb-6"
+      >
+        Si llegaste hasta aquí,<br />
+        <span class="italic">algo te dice</span> que somos<br />
+        lo que buscas.
+      </h2>
+      <p class="text-base-ink/65 text-[1.05rem] leading-relaxed mb-10 max-w-md">
+        No hace falta que tengas todo claro. Cuéntanos dónde estás y hacia dónde
+        quieres ir — lo demás lo vemos juntos.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a
+          href="/contact"
+          class="inline-block bg-base-ink text-base-bg font-semibold px-8 py-4 rounded-full hover:bg-base-ink/80 transition-colors duration-200"
+        >
+          Cuéntanos tu proyecto
+        </a>
+        <a
+          href="/servicios"
+          class="inline-block border-[1.5px] border-base-ink/30 text-base-ink font-semibold px-8 py-4 rounded-full hover:bg-base-ink/[0.07] transition-colors duration-200"
+        >
+          Ver qué hacemos →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
