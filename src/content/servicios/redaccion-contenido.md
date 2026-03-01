@@ -4,20 +4,38 @@ description: "Creamos textos que informan, convencen y posicionan: artículos de
 excerpt: "Las palabras venden, posicionan y generan confianza. Redactamos contenido estratégico que habla en el idioma de tu cliente y trabaja para tu negocio."
 icon: "edit"
 order: 3
+intro: "<em>No escribimos por escribir.</em> Cada pieza tiene un objetivo claro: captar, convencer o fidelizar. Combinamos <strong>estrategia de contenidos</strong>, SEO y <strong>voz de marca</strong> para que cada palabra sume."
+image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1400&q=80"
+imageAlt: "Proceso de redacción y creación de contenido"
+items:
+  - titulo: "Artículos de blog y SEO"
+    descripcion: "Contenidos optimizados para posicionamiento que responden a las preguntas reales de tu audiencia y atraen tráfico cualificado."
+  - titulo: "Copywriting web"
+    descripcion: "Textos para páginas de inicio, servicios, sobre nosotros y landing pages que convierten visitas en clientes."
+  - titulo: "Newsletters y email marketing"
+    descripcion: "Emails que la gente abre y lee. Secuencias, campañas puntuales y comunicación de marca con ritmo y personalidad."
+  - titulo: "Guiones y contenido audiovisual"
+    descripcion: "Guiones para vídeos, reels y podcasts con una narrativa coherente con tu estrategia de contenidos."
+proceso:
+  - titulo: "Investigación y briefing"
+    descripcion: "Antes de escribir una sola palabra, entendemos tu negocio, tu audiencia y los términos por los que quieres posicionar. El briefing es la base de todo."
+  - titulo: "Investigación de keywords y competencia"
+    descripcion: "Identificamos las palabras clave con mejor relación entre volumen de búsqueda y dificultad, y analizamos qué están haciendo bien los contenidos que ya rankean."
+  - titulo: "Redacción y entrega del primer borrador"
+    descripcion: "Redactamos el contenido y te lo enviamos para revisión. Incluimos estructura, SEO on-page y sugerencias de recursos visuales."
+  - titulo: "Revisión y ajustes"
+    descripcion: "Incorporamos tu feedback hasta que el texto sea exactamente lo que necesitas. Incluimos hasta dos rondas de revisión."
+  - titulo: "Publicación y seguimiento"
+    descripcion: "Si lo necesitas, gestionamos la publicación directamente en tu CMS y hacemos seguimiento del rendimiento del contenido en los meses siguientes."
+faqs:
+  - pregunta: "¿Escribís sobre cualquier sector o tenéis especialidades?"
+    respuesta: "Tenemos experiencia en sectores como salud, tecnología, gastronomía, retail y servicios profesionales. Para nichos muy técnicos hacemos una fase de investigación más exhaustiva o trabajamos con expertos del sector que nos aportan el conocimiento técnico."
+  - pregunta: "¿Los textos están optimizados para SEO?"
+    respuesta: "Sí, siempre. Hacemos investigación de palabras clave antes de escribir, optimizamos la estructura (H1, H2, meta), la densidad semántica y los enlaces internos. El objetivo es que el texto sea útil para el lector y visible para Google."
+  - pregunta: "¿Cuánto tiempo tardáis en entregar un artículo?"
+    respuesta: "Un artículo de blog estándar (1.000-1.500 palabras) lo entregamos en 5-7 días laborables desde que tenemos el briefing aprobado. Para volúmenes mayores definimos un calendario editorial con entregas periódicas."
+  - pregunta: "¿Puedo pedir textos sueltos o solo trabajáis con contratos mensuales?"
+    respuesta: "Puedes pedir piezas sueltas, aunque los mejores resultados se consiguen con una estrategia de contenidos continua. Si necesitas un texto puntual, podemos valorarlo sin compromiso."
+  - pregunta: "¿Los textos son originales o usáis IA para generarlos?"
+    respuesta: "Son originales y redactados por personas. Podemos usar IA como herramienta de investigación o estructuración, pero el texto final siempre pasa por revisión y reescritura humana para garantizar calidad, originalidad y voz de marca."
 ---
-
-## Contenido que trabaja para tu marca
-
-No escribimos por escribir. Cada pieza tiene un objetivo claro: captar, convencer o fidelizar.
-
-### Artículos de blog y SEO
-Contenidos optimizados para posicionamiento que responden a las preguntas reales de tu audiencia y atraen tráfico cualificado.
-
-### Copywriting web
-Textos para páginas de inicio, servicios, sobre nosotros y landing pages que convierten visitas en clientes.
-
-### Newsletters y email marketing
-Emails que la gente abre y lee. Secuencias, campañas puntuales y comunicación de marca con ritmo y personalidad.
-
-### Guiones y contenido audiovisual
-Guiones para vídeos, reels y podcasts con una narrativa coherente con tu estrategia de contenidos.

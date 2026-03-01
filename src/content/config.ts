@@ -23,6 +23,33 @@ const servicios = defineCollection({
     excerpt: z.string(),
     icon: z.string().optional(),
     order: z.number().default(0),
+    intro: z.string().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    items: z
+      .array(
+        z.object({
+          titulo: z.string(),
+          descripcion: z.string(),
+        })
+      )
+      .optional(),
+    proceso: z
+      .array(
+        z.object({
+          titulo: z.string(),
+          descripcion: z.string(),
+        })
+      )
+      .optional(),
+    faqs: z
+      .array(
+        z.object({
+          pregunta: z.string(),
+          respuesta: z.string(),
+        })
+      )
+      .optional(),
   }),
 });
 

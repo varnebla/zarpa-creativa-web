@@ -4,20 +4,38 @@ description: "Analizamos en profundidad tu estrategia digital actual para detect
 excerpt: "Antes de invertir más, asegúrate de que lo que tienes funciona. Auditamos tu marketing digital y te decimos exactamente qué cambiar y por qué."
 icon: "search"
 order: 2
+intro: "Una auditoría bien hecha es <em>la mejor inversión antes de escalar</em>. Identificamos los <strong>cuellos de botella</strong> y las oportunidades que otros no ven, con datos concretos y <strong>recomendaciones accionables</strong>."
+image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80"
+imageAlt: "Análisis de datos de marketing digital en pantalla"
+items:
+  - titulo: "Auditoría de presencia digital"
+    descripcion: "Revisamos tu web, redes sociales, SEO y perfiles de negocio para detectar incoherencias y puntos de mejora."
+  - titulo: "Análisis de competencia"
+    descripcion: "Estudio de los competidores directos: qué están haciendo bien, dónde fallan y cómo puedes diferenciarte."
+  - titulo: "Diagnóstico de contenidos"
+    descripcion: "Evaluamos la calidad, consistencia y rendimiento de tus contenidos actuales."
+  - titulo: "Plan de acción priorizado"
+    descripcion: "Entregamos un informe claro con recomendaciones ordenadas por impacto y facilidad de implementación."
+proceso:
+  - titulo: "Briefing inicial"
+    descripcion: "Una sesión de trabajo para entender tu negocio, tus objetivos y qué has hecho hasta ahora en marketing digital."
+  - titulo: "Recogida de datos y accesos"
+    descripcion: "Necesitamos acceso a tus herramientas: Analytics, Search Console, perfiles de redes y cualquier plataforma que uses. Todo se maneja con total confidencialidad."
+  - titulo: "Análisis en profundidad"
+    descripcion: "Revisamos cada canal, comparamos con la competencia y cruzamos los datos para encontrar patrones y oportunidades reales."
+  - titulo: "Elaboración del informe"
+    descripcion: "Redactamos un informe ejecutivo con los hallazgos más importantes y un plan de acción priorizado por impacto."
+  - titulo: "Presentación y sesión de preguntas"
+    descripcion: "Te presentamos los resultados en una reunión y resolvemos todas las dudas. El informe es tuyo para siempre."
+faqs:
+  - pregunta: "¿Cuánto tiempo dura una auditoría?"
+    respuesta: "Entre 2 y 3 semanas desde que tenemos todos los accesos necesarios. Para proyectos más complejos o con múltiples canales puede extenderse a 4 semanas."
+  - pregunta: "¿Qué accesos necesitáis para hacer la auditoría?"
+    respuesta: "Google Analytics, Google Search Console, acceso de lectura a tus perfiles de redes sociales y, si las usas, plataformas de email marketing o publicidad. Nunca pedimos más acceso del necesario."
+  - pregunta: "¿La auditoría incluye un plan de acción o solo el diagnóstico?"
+    respuesta: "Incluye ambos. El diagnóstico sin recomendaciones no sirve de nada. Siempre entregamos un plan de acción priorizado para que sepas exactamente por dónde empezar."
+  - pregunta: "¿Podéis implementar vosotros las mejoras que detectéis?"
+    respuesta: "Sí. Muchos clientes nos contratan primero para la auditoría y luego para ejecutar las mejoras. Pero no es obligatorio: el informe es suficientemente claro para que lo ejecute cualquier equipo."
+  - pregunta: "¿Tiene sentido hacer una auditoría si acabo de lanzar mi negocio?"
+    respuesta: "En ese caso tiene más sentido una sesión de estrategia que una auditoría. La auditoría es útil cuando ya tienes presencia digital activa y quieres saber por qué no está dando los resultados esperados."
 ---
-
-## Auditorías de marketing digital
-
-Una auditoría bien hecha es la mejor inversión antes de escalar. Identificamos los cuellos de botella y las oportunidades que otros no ven.
-
-### Auditoría de presencia digital
-Revisamos tu web, redes sociales, SEO y perfiles de negocio para detectar incoherencias y puntos de mejora.
-
-### Análisis de competencia
-Estudio de los competidores directos: qué están haciendo bien, dónde fallan y cómo puedes diferenciarte.
-
-### Diagnóstico de contenidos
-Evaluamos la calidad, consistencia y rendimiento de tus contenidos actuales.
-
-### Plan de acción priorizado
-Entregamos un informe claro con recomendaciones ordenadas por impacto y facilidad de implementación.

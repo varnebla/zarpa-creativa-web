@@ -4,20 +4,38 @@ description: "Nos encargamos de toda tu presencia en redes: estrategia, calendar
 excerpt: "De la estrategia al último comentario. Gestionamos tus redes para que no tengas que pensar en ellas — y para que hablen solos los resultados."
 icon: "share"
 order: 1
+intro: "Tu presencia en redes <em>no puede ser improvisada</em>. Diseñamos una <strong>estrategia clara</strong> y la ejecutamos día a día con creatividad y datos para que cada publicación tenga un propósito y un <strong>impacto medible</strong>."
+image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1400&q=80"
+imageAlt: "Persona gestionando redes sociales desde móvil y ordenador"
+items:
+  - titulo: "Estrategia y calendario editorial"
+    descripcion: "Definimos los pilares de contenido, el tono de marca y el ritmo de publicación adaptado a cada red y a tu audiencia."
+  - titulo: "Creación de contenido"
+    descripcion: "Diseño de piezas visuales, copies y vídeos cortos que generan interacción real y refuerzan tu identidad de marca."
+  - titulo: "Community Management"
+    descripcion: "Gestión diaria de comentarios, mensajes directos y conversaciones. Tu comunidad, atendida y en crecimiento."
+  - titulo: "Reporting mensual"
+    descripcion: "Informe detallado de métricas clave: alcance, engagement, crecimiento de seguidores y conversiones."
+proceso:
+  - titulo: "Auditoría de tu presencia actual"
+    descripcion: "Revisamos tus perfiles activos, qué contenido ha funcionado y dónde están las oportunidades de mejora inmediata."
+  - titulo: "Definición de estrategia y tono"
+    descripcion: "Establecemos los pilares de contenido, el calendario editorial y la voz de marca que usaremos en cada red."
+  - titulo: "Producción y publicación"
+    descripcion: "Creamos, programamos y publicamos cada pieza. Tú revisas y apruebas antes de que salga al mundo."
+  - titulo: "Gestión de comunidad"
+    descripcion: "Atendemos comentarios y mensajes diariamente para que ninguna conversación quede sin respuesta."
+  - titulo: "Informe y ajuste mensual"
+    descripcion: "Cada mes te presentamos los resultados, conclusiones y los cambios que aplicaremos para el siguiente período."
+faqs:
+  - pregunta: "¿En qué redes sociales trabajáis?"
+    respuesta: "Trabajamos principalmente con Instagram, LinkedIn, Facebook y TikTok. La selección de canales depende de dónde está tu audiencia y tus objetivos: no tiene sentido estar en todas si no hay retorno real."
+  - pregunta: "¿Puedo seguir publicando yo también o lo gestionáis vosotros por completo?"
+    respuesta: "Como prefieras. Podemos gestionar el 100% de la cuenta o trabajar de forma coordinada contigo, con un reparto de responsabilidades claro desde el inicio."
+  - pregunta: "¿Cuánto contenido publicáis a la semana?"
+    respuesta: "Depende del plan y la red. Lo definimos juntos según el presupuesto y la frecuencia que tiene sentido para tu sector. La consistencia importa más que el volumen."
+  - pregunta: "¿Incluye el diseño de las piezas visuales?"
+    respuesta: "Sí. Creamos las piezas gráficas adaptadas a tu identidad de marca. Si ya tienes un manual de marca, lo respetamos; si no, lo construimos contigo."
+  - pregunta: "¿Cómo mediré los resultados?"
+    respuesta: "Recibirás un informe mensual con las métricas más relevantes para tu negocio: alcance, interacciones, crecimiento de seguidores y tráfico generado. Sin datos irrelevantes, solo lo que importa."
 ---
-
-## Gestión integral de redes sociales
-
-Tu presencia en redes no puede ser improvisada. Diseñamos una estrategia clara y la ejecutamos día a día con creatividad y datos.
-
-### Estrategia y calendario editorial
-Definimos los pilares de contenido, el tono de marca y el ritmo de publicación adaptado a cada red y a tu audiencia.
-
-### Creación de contenido
-Diseño de piezas visuales, copies y vídeos cortos que generan interacción real y refuerzan tu identidad de marca.
-
-### Community Management
-Gestión diaria de comentarios, mensajes directos y conversaciones. Tu comunidad, atendida y en crecimiento.
-
-### Reporting mensual
-Informe detallado de métricas clave: alcance, engagement, crecimiento de seguidores y conversiones.
