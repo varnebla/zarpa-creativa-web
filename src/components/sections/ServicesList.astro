@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+
+const servicios = await getCollection('servicios');
+const sorted = servicios.sort((a, b) => a.data.order - b.data.order);
+---
+
+<section class="py-24 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-16">
+      <p
+        class="text-sm font-medium tracking-widest text-neutral-600 uppercase mb-4"
+      >
+        Servicios
+      </p>
+      <h1 class="font-display text-5xl md:text-6xl font-bold text-neutral-950">
+        Lo que hacemos
+      </h1>
+      <p class="mt-6 text-lg text-neutral-700 max-w-2xl">
+        Cada proyecto es diferente. Por eso ofrecemos servicios complementarios
+        que se adaptan a tus objetivos y tu momento de crecimiento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200">
+      {
+        sorted.map((servicio) => (
+          <a
+            href={`/servicios/${servicio.id}`}
+            class="group bg-white p-10 hover:bg-neutral-950 transition-colors duration-300"
+          >
+            <h2 class="font-display text-3xl font-semibold text-neutral-950 group-hover:text-white mb-4 transition-colors duration-300">
+              {servicio.data.title}
+            </h2>
+            <p class="text-neutral-700 group-hover:text-neutral-300 leading-relaxed transition-colors duration-300">
+              {servicio.data.excerpt}
+            </p>
+            <span class="inline-block mt-8 text-sm font-semibold text-neutral-950 group-hover:text-white transition-colors duration-300">
+              Más información →
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+---
+
+---
+
+<section class="py-24 px-6 bg-neutral-100">
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-16 text-center">
+      <p
+        class="text-sm font-medium tracking-widest text-neutral-600 uppercase mb-4"
+      >
+        Nuestros valores
+      </p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-neutral-950">
+        Lo que nos mueve
+      </h2>
+    </div>
+
+    <dl class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      {
+        [
+          {
+            term: 'Honestidad',
+            definition:
+              'Decimos lo que pensamos y prometemos solo lo que podemos cumplir. Sin humo.',
+          },
+          {
+            term: 'Curiosidad',
+            definition:
+              'El marketing digital cambia constantemente. Aprender es parte de nuestro trabajo diario.',
+          },
+          {
+            term: 'Resultado',
+            definition:
+              'Cada decisión estratégica tiene que poder medirse. Nos importa el impacto real en tu negocio.',
+          },
+        ].map(({ term, definition }) => (
+          <div>
+            <dt class="font-display text-2xl font-semibold text-neutral-950 mb-3">
+              {term}
+            </dt>
+            <dd class="text-neutral-700 leading-relaxed">{definition}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

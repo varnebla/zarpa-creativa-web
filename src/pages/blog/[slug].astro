@@ -1,0 +1,81 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout
+  title={`${post.data.title} - Zarpa Creativa`}
+  description={post.data.description}
+>
+  <article class="py-24 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <nav class="mb-12">
+        <a
+          href="/blog"
+          class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors"
+        >
+          ← Volver al blog
+        </a>
+      </nav>
+
+      <header class="mb-12">
+        <div class="flex gap-2 flex-wrap mb-6">
+          {
+            post.data.tags.map((tag) => (
+              <span class="text-xs font-medium text-neutral-600 uppercase tracking-wider">
+                {tag}
+              </span>
+            ))
+          }
+        </div>
+        <h1
+          class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-950 leading-tight mb-6"
+        >
+          {post.data.title}
+        </h1>
+        <p class="text-xl text-neutral-700 leading-relaxed mb-8">
+          {post.data.description}
+        </p>
+        <time
+          datetime={post.data.pubDate.toISOString()}
+          class="text-sm text-neutral-600"
+        >
+          {
+            post.data.pubDate.toLocaleDateString('es-ES', {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+            })
+          }
+        </time>
+      </header>
+
+      {
+        post.data.image && (
+          <div class="aspect-video bg-neutral-100 mb-16 overflow-hidden">
+            <img
+              src={post.data.image}
+              alt={post.data.imageAlt ?? post.data.title}
+              class="w-full h-full object-cover"
+            />
+          </div>
+        )
+      }
+
+      <div class="prose prose-neutral prose-lg max-w-none">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Layout>

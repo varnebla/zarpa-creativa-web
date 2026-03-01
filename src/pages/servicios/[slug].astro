@@ -1,0 +1,60 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const servicios = await getCollection('servicios');
+  return servicios.map((servicio) => ({
+    params: { slug: servicio.id },
+    props: { servicio },
+  }));
+}
+
+const { servicio } = Astro.props;
+const { Content } = await render(servicio);
+---
+
+<Layout
+  title={`${servicio.data.title} - Zarpa Creativa`}
+  description={servicio.data.description}
+>
+  <article class="py-24 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <nav class="mb-12">
+        <a
+          href="/servicios"
+          class="text-sm font-medium text-neutral-600 hover:text-neutral-950 transition-colors"
+        >
+          ← Todos los servicios
+        </a>
+      </nav>
+
+      <header class="mb-16">
+        <h1
+          class="font-display text-5xl md:text-6xl font-bold text-neutral-950 leading-tight mb-6"
+        >
+          {servicio.data.title}
+        </h1>
+        <p class="text-xl text-neutral-700 leading-relaxed">
+          {servicio.data.description}
+        </p>
+      </header>
+
+      <div class="prose prose-neutral prose-lg max-w-none">
+        <Content />
+      </div>
+
+      <div class="mt-20 pt-12 border-t border-neutral-200">
+        <p class="font-display text-2xl font-semibold text-neutral-950 mb-6">
+          ¿Te interesa este servicio?
+        </p>
+        <a
+          href="/contact"
+          class="inline-block bg-neutral-950 text-white font-semibold px-8 py-4 rounded-full hover:bg-neutral-800 transition-colors"
+        >
+          Hablemos de tu proyecto
+        </a>
+      </div>
+    </div>
+  </article>
+</Layout>

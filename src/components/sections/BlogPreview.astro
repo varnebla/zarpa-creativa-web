@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const latest = posts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<section class="py-24 px-6 bg-neutral-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-end justify-between mb-16">
+      <div>
+        <p
+          class="text-sm font-medium tracking-widest text-neutral-600 uppercase mb-4"
+        >
+          Blog
+        </p>
+        <h2
+          class="font-display text-4xl md:text-5xl font-bold text-neutral-950"
+        >
+          Ideas y tendencias
+        </h2>
+      </div>
+      <a
+        href="/blog"
+        class="hidden md:inline-block text-sm font-semibold text-neutral-950 hover:text-neutral-500 transition-colors"
+      >
+        Ver todos los artículos →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        latest.map((post) => (
+          <a href={`/blog/${post.id}`} class="group">
+            <div class="aspect-video bg-neutral-200 mb-6 overflow-hidden">
+              {post.data.image && (
+                <img
+                  src={post.data.image}
+                  alt={post.data.imageAlt ?? post.data.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              )}
+            </div>
+            <div class="flex gap-2 flex-wrap mb-3">
+              {post.data.tags.map((tag) => (
+                <span class="text-xs font-medium text-neutral-600 uppercase tracking-wider">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <h3 class="font-display text-xl font-semibold text-neutral-950 group-hover:text-neutral-600 transition-colors leading-snug">
+              {post.data.title}
+            </h3>
+            <p class="mt-2 text-sm text-neutral-600">
+              {post.data.pubDate.toLocaleDateString('es-ES', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+              })}
+            </p>
+          </a>
+        ))
+      }
+    </div>
+
+    <a
+      href="/blog"
+      class="md:hidden inline-block mt-10 text-sm font-semibold text-neutral-950 hover:text-neutral-500 transition-colors"
+    >
+      Ver todos los artículos →
+    </a>
+  </div>
+</section>

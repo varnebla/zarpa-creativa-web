@@ -1,0 +1,153 @@
+---
+const nav = [
+  { label: 'Servicios', href: '/servicios' },
+  { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<div
+  class="fixed top-4 left-0 right-0 z-50 flex flex-col items-center px-4 gap-2"
+>
+  <!-- Pill -->
+  <header
+    class="w-full max-w-3xl bg-white/75 backdrop-blur-xl rounded-full shadow-sm shadow-neutral-950/10 border border-white/60"
+  >
+    <div class="px-3 h-14 flex items-center justify-between gap-6">
+      <!-- Logo -->
+      <a
+        href="/"
+        class="font-display font-bold text-lg text-neutral-950 hover:text-neutral-600 transition-colors shrink-0 ml-2"
+      >
+        Zarpa Creativa
+      </a>
+
+      <!-- Nav desktop -->
+      <nav
+        aria-label="Navegación principal"
+        class="hidden md:flex items-center gap-6"
+      >
+        {
+          nav.map(({ label, href }) => {
+            const isActive =
+              currentPath === href || currentPath.startsWith(href + '/');
+            return (
+              <a
+                href={href}
+                class:list={[
+                  'text-sm font-medium transition-colors',
+                  isActive
+                    ? 'text-neutral-950'
+                    : 'text-neutral-700 hover:text-neutral-950',
+                ]}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {label}
+              </a>
+            );
+          })
+        }
+      </nav>
+
+      <!-- CTA + hamburger -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a
+          href="/contact"
+          class="hidden md:inline-flex items-center gap-2 bg-neutral-950 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-neutral-700 transition-colors"
+        >
+          Hablemos
+          <span aria-hidden="true">→</span>
+        </a>
+
+        <!-- Hamburger (mobile) -->
+        <button
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Abrir menú"
+          class="md:hidden flex flex-col gap-1.5 p-1"
+        >
+          <span
+            class="block w-5 h-px bg-neutral-950 transition-all duration-300"
+            id="bar1"></span>
+          <span
+            class="block w-5 h-px bg-neutral-950 transition-all duration-300"
+            id="bar2"></span>
+          <span
+            class="block w-5 h-px bg-neutral-950 transition-all duration-300"
+            id="bar3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (drop below pill) -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden w-full max-w-3xl bg-white/80 backdrop-blur-xl rounded-3xl shadow-sm shadow-neutral-950/10 border border-white/60"
+  >
+    <nav aria-label="Menú móvil" class="flex flex-col px-6 py-6 gap-5">
+      {
+        nav.map(({ label, href }) => {
+          const isActive =
+            currentPath === href || currentPath.startsWith(href + '/');
+          return (
+            <a
+              href={href}
+              class:list={[
+                'text-base font-medium transition-colors',
+                isActive ? 'text-neutral-950' : 'text-neutral-700',
+              ]}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          );
+        })
+      }
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center gap-2 bg-neutral-950 text-white text-sm font-semibold px-5 py-3 rounded-full hover:bg-neutral-700 transition-colors mt-1"
+      >
+        Hablemos →
+      </a>
+    </nav>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('menu-toggle')!;
+  const menu = document.getElementById('mobile-menu')!;
+  const bar1 = document.getElementById('bar1')!;
+  const bar2 = document.getElementById('bar2')!;
+  const bar3 = document.getElementById('bar3')!;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('hidden') === false;
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+
+    if (isOpen) {
+      bar1.style.transform = 'translateY(6px) rotate(45deg)';
+      bar2.style.opacity = '0';
+      bar3.style.transform = 'translateY(-6px) rotate(-45deg)';
+    } else {
+      bar1.style.transform = '';
+      bar2.style.opacity = '';
+      bar3.style.transform = '';
+    }
+  });
+
+  menu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Abrir menú');
+      bar1.style.transform = '';
+      bar2.style.opacity = '';
+      bar3.style.transform = '';
+    });
+  });
+</script>

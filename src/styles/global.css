@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-general-sans), sans-serif;
+  --font-display: var(--font-playfair), serif;
+}
