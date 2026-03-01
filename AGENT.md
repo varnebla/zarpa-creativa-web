@@ -97,10 +97,13 @@ import ContactForm from '@/components/sections/ContactForm.vue'; // Vue: formula
 
 ## Estilos con Tailwind 4
 
+> **Regla absoluta: usar siempre Tailwind.** Está terminantemente prohibido crear bloques `<style>` en componentes `.astro` o `.vue`. Toda la presentación va en clases de utilidad directamente en el markup.
+
 - Usar clases de utilidad de Tailwind directamente en los templates.
-- No crear CSS custom salvo que sea estrictamente necesario (animaciones complejas, variables de diseño globales).
+- **No usar `<style>` en componentes.** Si un valor no tiene clase directa, usar sintaxis de valor arbitrario: `text-[clamp(1rem,2vw,1.5rem)]`, `tracking-[-0.03em]`, `shadow-[0_8px_48px_rgba(0,0,0,0.1)]`, etc.
+- La única excepción permitida para `style` inline es cuando se necesitan múltiples `background-image` en capas (gradientes compuestos), que Tailwind no puede expresar con una sola clase.
 - Las variables de diseño (colores de marca, tipografía) se definen en el `@theme` de Tailwind 4 en el CSS global.
-- Evitar `style` inline.
+- Evitar `style` inline para cualquier otra propiedad.
 
 ---
 

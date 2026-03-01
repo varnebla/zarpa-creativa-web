@@ -48,29 +48,13 @@
 
     <!-- Hero image -->
     <div
-      class="hero-image-wrap mt-16 animate-fade-in-up duration-1000 delay-700"
+      class="mt-16 w-full rounded-[1.25rem] overflow-hidden shadow-[0_8px_48px_rgba(0,0,0,0.1)] animate-fade-in-up duration-1000 delay-700"
     >
       <img
         src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1400&q=80"
         alt="Gato mirando a cámara"
-        class="hero-img"
+        class="w-full h-[clamp(260px,45vw,560px)] object-cover block"
       />
     </div>
   </div>
 </section>
-
-<style>
-  .hero-image-wrap {
-    width: 100%;
-    border-radius: 1.25rem;
-    overflow: hidden;
-    box-shadow: 0 8px 48px rgba(0, 0, 0, 0.1);
-  }
-
-  .hero-img {
-    width: 100%;
-    height: clamp(260px, 45vw, 560px);
-    object-fit: cover;
-    display: block;
-  }
-</style>
