@@ -1,4 +1,6 @@
 ---
+import FaqAccordion from '@/components/ui/FaqAccordion.astro';
+
 const faqs = [
   {
     pregunta: '¿Cuánto tiempo tarda en verse resultados?',
@@ -34,50 +36,4 @@ const faqs = [
 ];
 ---
 
-<section class="py-24 px-6 border-t border-base-ink/10">
-  <div class="max-w-6xl mx-auto">
-    <!-- Header -->
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24">
-      <div class="lg:sticky lg:top-32 lg:self-start">
-        <div class="flex items-center gap-4 mb-6">
-          <span class="block w-10 h-px bg-base-ink/40"></span>
-          <p
-            class="text-sm font-medium tracking-widest text-base-ink/50 uppercase"
-          >
-            FAQ
-          </p>
-        </div>
-        <h2
-          class="font-display text-4xl md:text-5xl font-bold leading-tight text-base-ink"
-        >
-          Preguntas<br />
-          <span class="italic text-base-ink/40">frecuentes</span>
-        </h2>
-      </div>
-
-      <!-- Accordion -->
-      <div class="divide-y divide-base-ink/10">
-        {
-          faqs.map((faq) => (
-            <details class="group py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-              <summary class="flex items-start justify-between gap-6 select-none">
-                <span class="font-display text-lg md:text-xl font-semibold text-base-ink leading-snug">
-                  {faq.pregunta}
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="mt-1 shrink-0 w-6 h-6 flex items-center justify-center rounded-full border border-base-ink/20 text-base-ink/50 text-sm transition-transform duration-300 group-open:rotate-45"
-                >
-                  +
-                </span>
-              </summary>
-              <p class="mt-4 text-neutral-600 leading-relaxed max-w-2xl">
-                {faq.respuesta}
-              </p>
-            </details>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</section>
+<FaqAccordion {faqs} borderTop />

@@ -1,4 +1,6 @@
 ---
+import ProcessList from '@/components/ui/ProcessList.astro';
+
 const pasos = [
   {
     titulo: 'Escuchamos y analizamos',
@@ -23,40 +25,4 @@ const pasos = [
 ];
 ---
 
-<section class="py-24 px-6">
-  <div class="max-w-6xl mx-auto">
-    <!-- Header -->
-    <div class="flex items-center gap-4 mb-16">
-      <span class="block w-10 h-px bg-base-ink/40"></span>
-      <p class="text-sm font-medium tracking-widest text-base-ink/50 uppercase">
-        Cómo trabajamos
-      </p>
-    </div>
-
-    <!-- Steps -->
-    <ol class="list-none">
-      {
-        pasos.map((paso, i) => (
-          <>
-            <li class="grid grid-cols-[4rem_1fr] md:grid-cols-[8rem_1fr] gap-6 md:gap-12 items-start py-10">
-              <span class="font-display text-5xl md:text-7xl font-bold text-base-ink/10 leading-none select-none">
-                {String(i + 1).padStart(2, '0')}
-              </span>
-              <div class="pt-2 md:pt-3">
-                <h3 class="font-display text-2xl md:text-3xl font-semibold text-base-ink mb-3">
-                  {paso.titulo}
-                </h3>
-                <p class="text-neutral-600 leading-relaxed max-w-xl">
-                  {paso.descripcion}
-                </p>
-              </div>
-            </li>
-            {i < pasos.length - 1 && (
-              <li aria-hidden="true" class="h-px bg-base-ink/10" />
-            )}
-          </>
-        ))
-      }
-    </ol>
-  </div>
-</section>
+<ProcessList {pasos} />

@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
 import ServicesCta from '@/components/sections/ServicesCta.astro';
+import ProcessList from '@/components/ui/ProcessList.astro';
+import FaqAccordion from '@/components/ui/FaqAccordion.astro';
 
 export async function getStaticPaths() {
   const servicios = await getCollection('servicios');
@@ -55,7 +57,7 @@ const faqJsonLd =
     </span>
 
     <div class="max-w-6xl mx-auto relative z-10">
-      <nav class="mb-12">
+      <nav class="mb-12 animate-fade-in-up duration-700">
         <a
           href="/servicios"
           class="inline-flex items-center gap-2 text-sm font-medium text-neutral-500 hover:text-base-bg transition-colors duration-200"
@@ -65,7 +67,9 @@ const faqJsonLd =
         </a>
       </nav>
 
-      <div class="flex items-center gap-4 mb-8">
+      <div
+        class="flex items-center gap-4 mb-8 animate-fade-in-up duration-700 delay-150"
+      >
         <span class="block w-10 h-px bg-brand-yellow"></span>
         <p
           class="text-sm font-medium tracking-widest text-brand-yellow uppercase"
@@ -78,12 +82,12 @@ const faqJsonLd =
         class="grid grid-cols-1 lg:grid-cols-[1fr_0.6fr] gap-12 lg:gap-24 items-end"
       >
         <h1
-          class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-base-bg"
+          class="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-base-bg animate-fade-in-up duration-700 delay-300"
         >
           {servicio.data.title}
         </h1>
         <p
-          class="text-lg text-neutral-400 leading-relaxed lg:pb-2 text-balance"
+          class="text-lg text-neutral-400 leading-relaxed lg:pb-2 text-balance animate-fade-in-up duration-700 delay-500"
         >
           {servicio.data.excerpt}
         </p>
@@ -157,85 +161,16 @@ const faqJsonLd =
   <!-- Proceso -->
   {
     proceso.length > 0 && (
-      <section class="py-24 px-6 border-t border-base-ink/10">
-        <div class="max-w-6xl mx-auto">
-          <div class="flex items-center gap-4 mb-16">
-            <span class="block w-10 h-px bg-base-ink/40" />
-            <p class="text-sm font-medium tracking-widest text-base-ink/50 uppercase">
-              Cómo trabajamos este servicio
-            </p>
-          </div>
-          <ol class="list-none">
-            {proceso.map((paso, i) => (
-              <>
-                <li class="grid grid-cols-[4rem_1fr] md:grid-cols-[8rem_1fr] gap-6 md:gap-12 items-start py-10">
-                  <span class="font-display text-5xl md:text-7xl font-bold text-base-ink/10 leading-none select-none">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div class="pt-2 md:pt-3">
-                    <h3 class="font-display text-2xl md:text-3xl font-semibold text-base-ink mb-3">
-                      {paso.titulo}
-                    </h3>
-                    <p class="text-neutral-600 leading-relaxed max-w-xl">
-                      {paso.descripcion}
-                    </p>
-                  </div>
-                </li>
-                {i < proceso.length - 1 && (
-                  <li aria-hidden="true" class="h-px bg-base-ink/10" />
-                )}
-              </>
-            ))}
-          </ol>
-        </div>
-      </section>
+      <ProcessList
+        pasos={proceso}
+        eyebrow="Cómo trabajamos este servicio"
+        borderTop
+      />
     )
   }
 
   <!-- FAQs -->
-  {
-    faqs.length > 0 && (
-      <section class="py-24 px-6 border-t border-base-ink/10">
-        <div class="max-w-6xl mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24">
-            <div class="lg:sticky lg:top-32 lg:self-start">
-              <div class="flex items-center gap-4 mb-6">
-                <span class="block w-10 h-px bg-base-ink/40" />
-                <p class="text-sm font-medium tracking-widest text-base-ink/50 uppercase">
-                  FAQ
-                </p>
-              </div>
-              <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight text-base-ink">
-                Preguntas
-                <br />
-                <span class="italic text-base-ink/40">frecuentes</span>
-              </h2>
-            </div>
-            <div class="divide-y divide-base-ink/10">
-              {faqs.map((faq) => (
-                <details class="group py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
-                  <summary class="flex items-start justify-between gap-6 select-none">
-                    <span class="font-display text-lg md:text-xl font-semibold text-base-ink leading-snug">
-                      {faq.pregunta}
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      class="mt-1 shrink-0 w-6 h-6 flex items-center justify-center rounded-full border border-base-ink/20 text-base-ink/50 text-sm transition-transform duration-300 group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <p class="mt-4 text-neutral-600 leading-relaxed max-w-2xl">
-                    {faq.respuesta}
-                  </p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-    )
-  }
+  {faqs.length > 0 && <FaqAccordion faqs={faqs} borderTop />}
 
   <!-- Bottom CTA -->
   <ServicesCta />
