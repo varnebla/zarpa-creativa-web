@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'tailwind-animations';
 
 @theme {
   --font-sans: var(--font-general-sans), sans-serif;

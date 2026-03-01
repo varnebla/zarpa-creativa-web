@@ -5,7 +5,7 @@ const servicios = await getCollection('servicios');
 const sorted = servicios.sort((a, b) => a.data.order - b.data.order);
 ---
 
-<section class="py-24 px-6 bg-white">
+<section class="py-24 px-6 bg-base-bg">
   <div class="max-w-6xl mx-auto">
     <div class="mb-16">
       <p
@@ -22,12 +22,12 @@ const sorted = servicios.sort((a, b) => a.data.order - b.data.order);
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-base-ink/10">
       {
         sorted.map((servicio) => (
           <a
             href={`/servicios/${servicio.id}`}
-            class="group bg-white p-10 hover:bg-neutral-950 transition-colors duration-300"
+            class="group bg-base-bg p-10 hover:bg-base-ink transition-colors duration-300"
           >
             <h2 class="font-display text-3xl font-semibold text-neutral-950 group-hover:text-white mb-4 transition-colors duration-300">
               {servicio.data.title}

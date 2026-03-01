@@ -104,6 +104,70 @@ import ContactForm from '@/components/sections/ContactForm.vue'; // Vue: formula
 
 ---
 
+## Animaciones con `tailwind-animations`
+
+El proyecto tiene instalada la librería [`tailwind-animations`](https://tailwind-animations.com/) (ya importada en `global.css`). **Usarla siempre que se necesite una animación**, antes de escribir keyframes CSS propios.
+
+### Instalación (ya hecha)
+
+Para Tailwind v4, basta con el `@import` en el CSS global:
+```css
+@import 'tailwind-animations';
+```
+
+### Clases de animación disponibles
+
+Prefijo `animate-` seguido del nombre del efecto:
+
+| Clase | Efecto |
+|---|---|
+| `animate-fade-in` | Aparición con opacidad |
+| `animate-blurred-fade-in` | Aparición con desenfoque |
+| `animate-zoom-in` | Entrada con zoom |
+| `animate-slide-in-top` | Entrada desde arriba |
+| `animate-slide-in-left` | Entrada desde la izquierda |
+| `animate-bouncing` | Rebote continuo |
+| `animate-pulsing` | Pulso continuo |
+| `animate-shake` | Vibración |
+| `animate-flip-horizontal` | Volteo horizontal |
+| `animate-rotate-360` | Rotación completa |
+| `animate-fade-in-up` | Subida con fade |
+
+Controlar duración, retardo y pasos con las utilidades estándar de Tailwind (`duration-*`, `delay-*`).
+
+### Animaciones al hacer scroll (viewport)
+
+Usar `timeline-view` para activar la animación cuando el elemento entra en pantalla:
+
+```html
+<!-- Elemento que aparece al hacer scroll -->
+<div class="timeline-view animate-fade-in-up animate-range-moderate">
+  Contenido
+</div>
+```
+
+**Rangos predefinidos** (cuándo empieza/termina la animación respecto a la visibilidad):
+
+| Clase | Rango |
+|---|---|
+| `animate-range-gradual` | 10% – 90% |
+| `animate-range-moderate` | 20% – 80% |
+| `animate-range-brisk` | 30% – 70% |
+| `animate-range-rapid` | 40% – 60% |
+| `animate-range-entry` | Solo al entrar |
+| `animate-range-exit` | Solo al salir |
+
+Rango personalizado con valor arbitrario: `animate-range-[entry_5%_contain_20%]`
+
+### Reglas de uso
+
+- **Preferir `timeline-view` + `animate-range-moderate`** como punto de partida para reveal de secciones.
+- Para hero y elementos críticos sobre el fold, usar la clase de animación directamente (sin `timeline-view`).
+- No crear `@keyframes` propios si existe una clase equivalente en la librería.
+- Combinar con `delay-*` para efectos escalonados (`delay-100`, `delay-200`, etc.).
+
+---
+
 ## Convenciones de nombre
 
 - Componentes: `PascalCase.astro` / `PascalCase.vue`
