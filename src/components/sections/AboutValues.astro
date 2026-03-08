@@ -6,7 +6,7 @@
   <div class="max-w-6xl mx-auto">
     <!-- Header -->
     <div
-      class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-20"
+      class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-20 animate-fade-in-up timeline-view animate-range-[entry_0%_cover_40%]"
     >
       <div>
         <p
@@ -26,7 +26,7 @@
     </div>
 
     <!-- Grid de valores -->
-    <dl class="grid grid-cols-1 md:grid-cols-3 gap-px bg-base-bg/10">
+    <dl class="grid grid-cols-1 md:grid-cols-3 gap-px grid-reveal">
       {
         [
           {
@@ -48,7 +48,7 @@
               'Cada decisión estratégica tiene que poder medirse. Nos importa el efecto real en tu negocio, no los informes bonitos.',
           },
         ].map(({ num, term, definition }) => (
-          <div class="bg-base-ink p-8 md:p-10 flex flex-col gap-6 group hover:bg-base-bg/4 transition-colors duration-300">
+          <div class="p-8 md:p-10 flex flex-col gap-6 group hover:bg-base-bg/4 transition-colors duration-300 animate-fade-in-up">
             <span class="font-display text-[4rem] font-bold leading-none text-base-bg/10 group-hover:text-brand-blue/30 transition-colors duration-300 select-none">
               {num}
             </span>

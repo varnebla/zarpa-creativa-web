@@ -16,18 +16,21 @@
   animation-timeline: --grid-reveal;
   animation-range: entry 0% cover 30%;
   animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
 .grid-reveal > *:nth-child(2) {
   animation-timeline: --grid-reveal;
   animation-range: entry 15% cover 45%;
   animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
 .grid-reveal > *:nth-child(3) {
   animation-timeline: --grid-reveal;
   animation-range: entry 30% cover 60%;
   animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
 /* 2-column grid stagger: odd = left col, even = right col */
@@ -37,14 +40,16 @@
 
 .grid-reveal-2 > *:nth-child(odd) {
   animation-timeline: --grid-reveal-2;
-  animation-range: entry 0% cover 35%;
+  animation-range: entry 0% cover 40%;
   animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
 .grid-reveal-2 > *:nth-child(even) {
   animation-timeline: --grid-reveal-2;
-  animation-range: entry 15% cover 50%;
+  animation-range: entry 20% cover 60%;
   animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
 /* Reduced motion */
