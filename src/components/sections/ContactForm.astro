@@ -20,7 +20,32 @@
       </p>
     </div>
 
-    <form class="space-y-8" method="POST" action="#">
+    <form
+      id="contact-form"
+      class="space-y-8"
+      method="POST"
+      action="https://api.web3forms.com/submit"
+    >
+      <!-- Web3Forms: sustituye YOUR_ACCESS_KEY por tu clave de web3forms.com -->
+      <input
+        type="hidden"
+        name="access_key"
+        value="47696c75-29b6-47ad-bbc4-878f14ff9dea"
+      />
+      <input
+        type="hidden"
+        name="subject"
+        value="Nuevo contacto desde la web — Zarpa Creativa"
+      />
+      <input type="hidden" name="from_name" value="Zarpa Creativa Web" />
+      <input
+        type="hidden"
+        name="redirect"
+        value="https://zarpacreativa.com/gracias"
+      />
+      <!-- Honeypot anti-spam -->
+      <input type="checkbox" name="botcheck" style="display:none" />
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <label class="block">
           <span class="text-sm font-medium text-neutral-700">Nombre</span>
@@ -64,12 +89,66 @@
           placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
       </label>
 
+      <!-- Feedback inline -->
+      <div
+        id="form-feedback"
+        class="hidden text-sm font-medium py-3 px-4 rounded-lg"
+      >
+      </div>
+
       <button
+        id="submit-btn"
         type="submit"
-        class="w-full md:w-auto bg-base-ink text-base-bg font-semibold px-10 py-4 rounded-full hover:bg-base-ink/80 transition-colors"
+        class="w-full md:w-auto bg-base-ink text-base-bg font-semibold px-10 py-4 rounded-full hover:bg-base-ink/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         Enviar mensaje
       </button>
     </form>
   </div>
 </section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const feedback = document.getElementById('form-feedback') as HTMLDivElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
+    feedback.classList.add('hidden');
+
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        feedback.textContent =
+          '¡Mensaje enviado! Te responderemos en menos de 24 horas.';
+        feedback.className =
+          'text-sm font-medium py-3 px-4 rounded-lg bg-green-50 text-green-800';
+        form.reset();
+      } else {
+        throw new Error(json.message ?? 'Error desconocido');
+      }
+    } catch (err) {
+      feedback.textContent =
+        'Algo ha salido mal. Por favor, inténtalo de nuevo o escríbenos directamente.';
+      feedback.className =
+        'text-sm font-medium py-3 px-4 rounded-lg bg-red-50 text-red-800';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Enviar mensaje';
+    }
+  });
+</script>
