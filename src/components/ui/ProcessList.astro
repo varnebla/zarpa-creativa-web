@@ -17,7 +17,7 @@ const { pasos, eyebrow = 'Cómo trabajamos', borderTop = false } = Astro.props;
   class:list={['py-24 px-6', borderTop && 'border-t border-base-ink/10']}
 >
   <div class="max-w-6xl mx-auto">
-    <div class="flex items-center gap-4 mb-16">
+    <div class="flex items-center gap-4 mb-16 animate-fade-in-up timeline-view animate-range-[entry_0%_cover_35%]">
       <span class="block w-10 h-px bg-base-ink/40"></span>
       <p class="text-sm font-medium tracking-widest text-base-ink/50 uppercase">
         {eyebrow}
@@ -28,7 +28,9 @@ const { pasos, eyebrow = 'Cómo trabajamos', borderTop = false } = Astro.props;
       {
         pasos.map((paso, i) => (
           <>
-            <li class="grid grid-cols-[4rem_1fr] md:grid-cols-[8rem_1fr] gap-6 md:gap-12 items-start py-10">
+            <li
+              class="grid grid-cols-[4rem_1fr] md:grid-cols-[8rem_1fr] gap-6 md:gap-12 items-start py-10 animate-fade-in-left timeline-view animate-range-[entry_0%_cover_40%]"
+            >
               <span class="font-display text-5xl md:text-7xl font-bold text-base-ink/10 leading-none select-none">
                 {String(i + 1).padStart(2, '0')}
               </span>

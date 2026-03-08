@@ -23,21 +23,23 @@ const testimonials = [
 
 <section class="bg-base-ink text-base-bg px-6 py-24 md:py-32">
   <div class="max-w-6xl mx-auto">
-    <p class="text-xs font-medium tracking-[0.15em] uppercase text-[#888] mb-5">
+    <p
+      class="text-xs font-medium tracking-[0.15em] uppercase text-[#888] mb-5 animate-fade-in timeline-view animate-range-[entry_0%_cover_35%]"
+    >
       Clientes
     </p>
     <h2
-      class="font-display text-[clamp(2rem,4vw,3.2rem)] font-bold leading-[1.15] tracking-[-0.03em] text-base-bg mb-14"
+      class="font-display text-[clamp(2rem,4vw,3.2rem)] font-bold leading-[1.15] tracking-[-0.03em] text-base-bg mb-14 animate-fade-in-up timeline-view animate-range-[entry_0%_cover_40%]"
     >
       Lo que dicen<br />quienes confían en nosotros
     </h2>
 
     <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden"
+      class="grid grid-cols-1 md:grid-cols-3 gap-px border border-white/10 rounded-2xl overflow-hidden grid-reveal"
     >
       {
-        testimonials.map((t) => (
-          <article class="bg-base-ink p-10 flex flex-col justify-between gap-8 transition-colors duration-200 hover:bg-[#242424]">
+        testimonials.map((t, index) => (
+          <article class="bg-base-ink p-10 flex flex-col justify-between gap-8 transition-colors duration-200 hover:bg-[#242424] animate-fade-in-up">
             <blockquote class="text-[clamp(1rem,1.4vw,1.15rem)] leading-[1.65] text-[#d9d5cd] not-italic font-normal">
               "{t.quote}"
             </blockquote>

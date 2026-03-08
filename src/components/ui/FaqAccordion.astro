@@ -18,7 +18,7 @@ const { faqs, borderTop = false } = Astro.props;
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-24">
       <!-- Sticky title -->
-      <div class="lg:sticky lg:top-32 lg:self-start">
+      <div class="lg:sticky lg:top-32 lg:self-start animate-fade-in-left timeline-view animate-range-[entry_0%_cover_45%]">
         <div class="flex items-center gap-4 mb-6">
           <span class="block w-10 h-px bg-base-ink/40"></span>
           <p
@@ -36,7 +36,7 @@ const { faqs, borderTop = false } = Astro.props;
       </div>
 
       <!-- Accordion -->
-      <div class="divide-y divide-base-ink/10">
+      <div class="divide-y divide-base-ink/10 animate-fade-in-right timeline-view animate-range-[entry_0%_cover_45%]">
         {
           faqs.map((faq) => (
             <details class="group py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">

@@ -9,21 +9,23 @@ const sorted = servicios.sort((a, b) => a.data.order - b.data.order);
   <div class="max-w-6xl mx-auto">
     <div class="mb-16">
       <p
-        class="text-sm font-medium tracking-widest text-base-ink/60 uppercase mb-4"
+        class="text-sm font-medium tracking-widest text-base-ink/60 uppercase mb-4 animate-fade-in-up timeline-view animate-range-[entry_0%_cover_35%]"
       >
         Lo que hacemos
       </p>
-      <h2 class="font-display text-4xl md:text-5xl font-bold text-base-ink">
+      <h2
+        class="font-display text-4xl md:text-5xl font-bold text-base-ink animate-fade-in-up timeline-view animate-range-[entry_0%_cover_40%]"
+      >
         Tres servicios.<br />Un solo objetivo.
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-base-ink/10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-px grid-reveal">
       {
         sorted.map((servicio) => (
           <a
             href={`/servicios/${servicio.id}`}
-            class="group bg-base-bg p-10 hover:bg-base-ink transition-colors duration-300"
+            class="group bg-base-bg p-10 hover:bg-base-ink transition-colors duration-300 animate-fade-in-up"
           >
             <h3 class="font-display text-2xl font-semibold text-base-ink group-hover:text-base-bg mb-4 transition-colors duration-300">
               {servicio.data.title}

@@ -19,12 +19,12 @@ const gridCols =
 
 <section class="py-24 px-6 bg-base-bg">
   <div class="max-w-6xl mx-auto">
-    <div class={`grid grid-cols-1 ${gridCols} gap-px bg-base-ink/10`}>
+    <div class={`grid grid-cols-1 ${gridCols} gap-px  grid-reveal`}>
       {
         sorted.map((servicio) => (
           <a
             href={`/servicios/${servicio.id}`}
-            class="group bg-base-bg p-10 hover:bg-base-ink transition-colors duration-300"
+            class="group bg-base-bg p-10 hover:bg-base-ink transition-colors duration-300 animate-fade-in-up"
           >
             <h2 class="font-display text-3xl font-semibold text-neutral-950 group-hover:text-white mb-4 transition-colors duration-300">
               {servicio.data.title}

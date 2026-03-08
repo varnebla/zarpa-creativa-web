@@ -1,6 +1,61 @@
 @import "tailwindcss";
 @import 'tailwind-animations';
 
+/*
+  Named view timeline for grid stagger.
+  The parent registers --grid-reveal with its own viewport entry progress.
+  All direct children share that same timeline → stagger by animation-range offset.
+  Unlayered CSS has higher cascade priority than @layer utilities,
+  so animation-timeline here correctly overrides the animation shorthand.
+*/
+.grid-reveal {
+  view-timeline-name: --grid-reveal;
+}
+
+.grid-reveal > *:nth-child(1) {
+  animation-timeline: --grid-reveal;
+  animation-range: entry 0% cover 30%;
+  animation-fill-mode: both;
+}
+
+.grid-reveal > *:nth-child(2) {
+  animation-timeline: --grid-reveal;
+  animation-range: entry 15% cover 45%;
+  animation-fill-mode: both;
+}
+
+.grid-reveal > *:nth-child(3) {
+  animation-timeline: --grid-reveal;
+  animation-range: entry 30% cover 60%;
+  animation-fill-mode: both;
+}
+
+/* 2-column grid stagger: odd = left col, even = right col */
+.grid-reveal-2 {
+  view-timeline-name: --grid-reveal-2;
+}
+
+.grid-reveal-2 > *:nth-child(odd) {
+  animation-timeline: --grid-reveal-2;
+  animation-range: entry 0% cover 35%;
+  animation-fill-mode: both;
+}
+
+.grid-reveal-2 > *:nth-child(even) {
+  animation-timeline: --grid-reveal-2;
+  animation-range: entry 15% cover 50%;
+  animation-fill-mode: both;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-timeline: auto !important;
+  }
+}
+
 @theme {
   --font-sans: var(--font-general-sans), sans-serif;
   --font-display: var(--font-playfair), serif;
